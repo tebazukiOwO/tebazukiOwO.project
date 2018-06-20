@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>学生自励中心欢迎您！</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="echarts.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="main">
+            <ul>
+                <ul>
+                    <a href="login.html">登录</a>
+                </ul>
+
+            </ul>
+            <div class="col">
+                <img src="img/logo1.png" alt="logo">
+            </div>
+        </div>
+    </div>
+    <div class="som">
+    </div>
+    <div class="wrap2">
+        <div class="container">
+            <div id="main" style="width: 1100px;height:400px;"></div>
+            <script type="text/javascript">
+                var myChart = echarts.init(document.getElementById('main'));
+
+                var option = {
+                    color: ['rgba(255, 255, 255, 0.9)'],
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'shadow'
+                        }
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    xAxis: [{
+                        type: 'category',
+                        data: ['人力资源部', '行政管理部', '财务部', '市场部', '公共关系部', '品牌推广部', '品牌孵化运营部', '运营管理部',
+                            '网络信息部'
+                        ],
+                        axisTick: {
+                            alignWithLabel: true
+                        }
+                    }],
+                    yAxis: [{
+                        type: 'value'
+                    }],
+                    series: [{
+                        name: '绩效',
+                        type: 'bar',
+                        barWidth: '60%',
+                        data: [10, 52, 200, 334, 390, 330, 220, 400, 300]
+                    }]
+                };
+
+
+                myChart.setOption(option);
+            </script>
+        </div>
+        <div class="footer">
+            <div class="main">
+                @上海对外经贸大学学生自励中心项目服务管理公司
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
